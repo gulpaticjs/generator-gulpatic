@@ -1,5 +1,5 @@
 # ![Gulpatic](https://raw.githubusercontent.com/boriskaiser/gulpatic/demo/resources/logo.png)
-> Yeoman generator for Gulpatic
+> Yeoman generator for [Gulpatic](https://github.com/boriskaiser/gulpatic)
 
 
 ## Getting started
