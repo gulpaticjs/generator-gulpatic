@@ -5,7 +5,12 @@ module.exports = generators.Base.extend({
 
   _copyFiles: function (files) {
     files.forEach(function (file) {
-      this.fs.copy(this.templatePath(file), this.destinationPath(file));
+      if (typeof file === 'string') {
+        this.fs.copy(this.templatePath(file), this.destinationPath(file));
+      } else {
+        // Rename file
+        this.fs.copy(this.templatePath(file[0]), this.destinationPath(file[1]));
+      }
     }.bind(this));
   },
 
@@ -95,13 +100,13 @@ module.exports = generators.Base.extend({
   configuring: function () {
     // Copy metadata files
     var files = [
-      '.babelrc',
-      '.bowerrc',
-      '.editorconfig',
-      '.eslintrc',
-      '.gitattributes',
-      '.gitignore',
-      '.nvmrc'
+      ['babelrc', '.babelrc'],
+      ['bowerrc', '.bowerrc'],
+      ['editorconfig', '.editorconfig'],
+      ['eslintrc', '.eslintrc'],
+      ['gitattributes', '.gitattributes'],
+      ['gitignore', '.gitignore'],
+      ['nvmrc', '.nvmrc']
     ];
     this._copyFiles(files);
   },
