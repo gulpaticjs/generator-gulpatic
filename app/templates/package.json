@@ -1,0 +1,58 @@
+{
+  "name": "<%= name %>",
+  "description": "<%= description %>",
+  "version": "<%= version %>",
+  "repository": {
+    "type": "git",
+    "url": "<%= gitRepository %>"
+  },
+  "homepage": "<%= homepage %>",
+  "license": "<%= license %>",
+  "author": {
+    "name": "<%= authorName %>",
+    "email": "<%= authorEmail %>",
+    "url": "<%= authorUrl %>"
+  },
+  "scripts": {
+    "prestart": "bower install",
+    "start": "gulp",
+    "prebuild": "npm run prestart",
+    "build": "cross-env NODE_ENV=production gulp build",
+    "deploy:gh-page": "gulp deploy:gh-page",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.3.6",
+    "babel-core": "^6.7.6",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.6.0",
+    "babel-register": "^6.7.2",
+    "bower": "^1.7.9",
+    "browser-sync": "^2.12.3",
+    "cross-env": "^1.0.7",
+    "del": "latest",
+    "eslint": "^2.7.0",
+    "eslint-config-airbnb": "^7.0.0",
+    "gulp": "^3.9.1",
+    "gulp-cache": "^0.4.4",
+    "gulp-cssnano": "^2.1.1",
+    "gulp-data": "^1.2.1",
+    "gulp-gh-pages": "^0.5.4",
+    "gulp-htmlmin": "^1.3.0",
+    "gulp-if": "^2.0.0",
+    "gulp-imagemin": "^2.4.0",
+    "gulp-load-plugins": "^1.2.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-postcss": "^6.1.0",
+    "gulp-sass": "^2.2.0",
+    "gulp-size": "^2.1.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-twig": "^0.5.0",
+    "gulp-uglify": "^1.5.3",
+    "gulp-useref": "^3.0.8",
+    "imagemin-pngquant": "^4.2.2",
+    "run-sequence": "^1.1.5",
+    "webpack-stream": "^3.1.0"
+  }
+}

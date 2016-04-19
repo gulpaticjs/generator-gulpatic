@@ -1,0 +1,28 @@
+{
+  "name": "generator-gulpatic",
+  "description": "Yeoman generator for Gulpatic",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/boriskaiser/generator-gulpatic.git"
+  },
+  "homepage": "https://boriskaiser.github.io/gulpatic",
+  "author": {
+    "name": "Boris Kaiser",
+    "email": "boris@kaiser.wtf",
+    "url": "http://kaiser.wtf"
+  },
+  "license": "MIT",
+  "main": "app/index.js",
+  "files": [
+    "app"
+  ],
+  "keywords": [
+    "yeoman-generator",
+    "gulpatic"
+  ],
+  "dependencies": {
+    "git-remote-origin-url": "^2.0.0",
+    "yeoman-generator": "^0.22.5"
+  }
+}
