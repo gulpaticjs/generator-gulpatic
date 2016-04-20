@@ -74,7 +74,7 @@ export default class GulpaticGenerator extends Base {
 
     this.prompt(prompts, (answers) => {
       // Cache answers
-      for (var answer in answers) {
+      for (const answer in answers) {
         if (answers.hasOwnProperty(answer)) {
           this.config.set(answer, answers[answer]);
         }
