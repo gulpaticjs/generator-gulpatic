@@ -2,15 +2,26 @@
 > Yeoman generator for [Gulpatic](https://github.com/boriskaiser/gulpatic)
 
 
-## Getting started
+## Usage
+In case you don't have `yo`:
 ```bash
-  npm install -g yo
-  npm install -g generator-gulpatic
-  mkdir MyAppName
-  cd MyAppName
-  yo gulpatic
-  npm start
+npm install -g yo
 ```
+
+Get `generator`:
+```bash
+npm install -g generator-gulpatic
+```
+
+Scaffold your app:
+```bash
+mkdir myAppName
+cd myAppName
+yo gulpatic
+npm start
+```
+
+Point your browser to [http://localhost:3000](http://localhost:3000).
 
 
 ## TODOs
