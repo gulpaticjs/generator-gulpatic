@@ -1,6 +1,7 @@
 # ![Gulpatic](https://raw.githubusercontent.com/boriskaiser/gulpatic/demo/resources/logo.png)
 > Yeoman generator for [Gulpatic](https://github.com/boriskaiser/gulpatic)
 
+[![Build Status](https://travis-ci.org/boriskaiser/generator-gulpatic.svg?branch=develop)](https://travis-ci.org/boriskaiser/generator-gulpatic)
 
 ## Usage
 In case you don't have `yo`:
