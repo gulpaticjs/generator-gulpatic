@@ -25,7 +25,7 @@ Point your browser to [http://localhost:3000](http://localhost:3000).
 
 
 ## TODOs
-- [ ] Add Travis CI
+- [ ]
 
 
 ## License
