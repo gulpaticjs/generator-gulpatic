@@ -21,7 +21,7 @@ class MyBase extends Base {
   }
 }
 
-export default class GulpaticGenerator extends MyBase {
+class GulpaticGenerator extends MyBase {
   prompting() {
     const done = this.async();
     const config = this.config.getAll();
@@ -158,5 +158,4 @@ export default class GulpaticGenerator extends MyBase {
   }
 }
 
-// ES5 export
 module.exports = GulpaticGenerator;
