@@ -150,10 +150,3 @@ gulp.task('build', cb => {
     cb
   );
 });
-
-// DEPLOY TASK
-// Deploy github page
-gulp.task('deploy:gh-page', ['build'], () =>
-  gulp.src(`${currentDistPath}/**/*`)
-    .pipe($.ghPages())
-);
