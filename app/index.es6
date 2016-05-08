@@ -1,7 +1,7 @@
-import { Base } from 'yeoman-generator';
+const Base = require('yeoman-generator').Base;
 
-export default class GulpaticGenerator extends Base {
-  _copyFiles(files) {
+class MyBase extends Base {
+  copyFiles(files) {
     files.forEach((file) => {
       if (typeof file === 'string') {
         this.fs.copy(this.templatePath(file), this.destinationPath(file));
@@ -12,14 +12,16 @@ export default class GulpaticGenerator extends Base {
     });
   }
 
-  _copyTplFiles(files) {
+  copyTplFiles(files) {
     const config = this.config.getAll();
 
     files.forEach((file) => {
       this.fs.copyTpl(this.templatePath(file), this.destinationPath(file), config);
     });
   }
+}
 
+export default class GulpaticGenerator extends MyBase {
   prompting() {
     const done = this.async();
     const config = this.config.getAll();
@@ -74,12 +76,7 @@ export default class GulpaticGenerator extends Base {
 
     this.prompt(prompts, (answers) => {
       // Cache answers
-      for (const answer in answers) {
-        if (answers.hasOwnProperty(answer)) {
-          this.config.set(answer, answers[answer]);
-        }
-      }
-
+      Object.keys(answers).forEach(answer => this.config.set(answer, answers[answer]));
       done();
     });
   }
@@ -95,7 +92,7 @@ export default class GulpaticGenerator extends Base {
       ['gitignore', '.gitignore'],
       ['nvmrc', '.nvmrc'],
     ];
-    this._copyFiles(files);
+    this.copyFiles(files);
   }
 
   get writing() {
@@ -114,10 +111,10 @@ export default class GulpaticGenerator extends Base {
           'app/src/views/.gitkeep',
           'app/src/views/index.twig',
         ];
-        this._copyFiles(files);
+        this.copyFiles(files);
 
         const filesTpl = ['app/src/views/data.json'];
-        this._copyTplFiles(filesTpl);
+        this.copyTplFiles(filesTpl);
       },
 
       gulpfile() {
@@ -133,25 +130,25 @@ export default class GulpaticGenerator extends Base {
           'gulpfile.babel.js/index.js',
           'gulpfile.babel.js/paths.js',
         ];
-        this._copyFiles(files);
+        this.copyFiles(files);
       },
 
       bower() {
-        this._copyTplFiles(['bower.json']);
+        this.copyTplFiles(['bower.json']);
       },
 
       license() {
         if (this.config.get('license') === 'MIT') {
-          this._copyTplFiles(['license']);
+          this.copyTplFiles(['license']);
         }
       },
 
       package() {
-        this._copyTplFiles(['package.json']);
+        this.copyTplFiles(['package.json']);
       },
 
       readme() {
-        this._copyTplFiles(['readme.md']);
+        this.copyTplFiles(['readme.md']);
       },
     };
   }
