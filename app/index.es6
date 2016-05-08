@@ -88,6 +88,7 @@ class GulpaticGenerator extends MyBase {
       ['bowerrc', '.bowerrc'],
       ['editorconfig', '.editorconfig'],
       ['eslintrc', '.eslintrc'],
+      ['eslintignore', '.eslintignore'],
       ['gitattributes', '.gitattributes'],
       ['gitignore', '.gitignore'],
       ['nvmrc', '.nvmrc'],

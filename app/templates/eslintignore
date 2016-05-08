@@ -1,0 +1,4 @@
+.tmp
+app/public
+build
+node_modules
