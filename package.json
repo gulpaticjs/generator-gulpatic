@@ -2,13 +2,13 @@
   "name": "generator-gulpatic",
   "description": "Yeoman generator for Gulpatic",
   "version": "1.0.2-alpha.1",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gulpaticjs/generator-gulpatic.git"
-  },
   "scripts": {
     "start": "babel app/index.es6 --watch --out-file app/index.js",
     "lint": "eslint app/index.es6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gulpaticjs/generator-gulpatic.git"
   },
   "homepage": "https://gulpaticjs.github.io",
   "author": {
@@ -23,7 +23,9 @@
   ],
   "keywords": [
     "yeoman-generator",
-    "gulpatic"
+    "gulpatic",
+    "gulp",
+    "starter kit"
   ],
   "dependencies": {
     "yeoman-generator": "^0.22.6"
