@@ -1,7 +1,7 @@
-# ![Gulpatic](https://raw.githubusercontent.com/boriskaiser/gulpatic/demo/resources/logo.png)
-> Yeoman generator for [Gulpatic](https://github.com/boriskaiser/gulpatic)
+# ![Gulpatic](https://raw.githubusercontent.com/gulpaticjs/gulpatic/demo/resources/logo.png)
+> Yeoman generator for [Gulpatic](https://github.com/gulpaticjs/gulpatic)
 
-[![Build Status](https://travis-ci.org/boriskaiser/generator-gulpatic.svg?branch=develop)](https://travis-ci.org/boriskaiser/generator-gulpatic)
+[![Build Status](https://travis-ci.org/gulpaticjs/generator-gulpatic.svg?branch=develop)](https://travis-ci.org/gulpaticjs/generator-gulpatic)
 
 ## Usage
 In case you don't have `yo`:
