@@ -1,4 +1,5 @@
 const Base = require('yeoman-generator').Base;
+const yosay = require('yosay');
 
 class MyBase extends Base {
   copyFiles(files) {
@@ -25,7 +26,6 @@ class GulpaticGenerator extends MyBase {
   prompting() {
     const done = this.async();
     const config = this.config.getAll();
-
     const prompts = [
       {
         name: 'name',
@@ -73,6 +73,8 @@ class GulpaticGenerator extends MyBase {
         default: config.license || 'MIT',
       },
     ];
+
+    console.log(yosay('Hello, and welcome to Gulpatic generator!'));
 
     this.prompt(prompts, (answers) => {
       // Cache answers
