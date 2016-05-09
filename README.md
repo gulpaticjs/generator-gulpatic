@@ -3,8 +3,6 @@
 
 [![Build Status](https://travis-ci.org/gulpaticjs/generator-gulpatic.svg?branch=develop)](https://travis-ci.org/gulpaticjs/generator-gulpatic)
 
-# ![Screenshot](https://raw.githubusercontent.com/gulpaticjs/generator-gulpatic/develop/screenshot.png)
-
 ## Usage
 In case you don't have `yo`:
 ```bash
@@ -24,7 +22,7 @@ yo gulpatic
 npm start
 ```
 
-Point your browser to [http://localhost:3000](http://localhost:3000).
+# ![Screenshot](https://raw.githubusercontent.com/gulpaticjs/generator-gulpatic/develop/screenshot.png)
 
 
 ## TODOs
