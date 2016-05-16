@@ -25,9 +25,5 @@ npm start
 # ![Screenshot](https://raw.githubusercontent.com/gulpaticjs/generator-gulpatic/develop/screenshot.png)
 
 
-## TODOs
-- [ ]
-
-
 ## License
 MIT © [Boris Kaiser](http://kaiser.wtf)
