@@ -31,7 +31,8 @@ class GulpaticGenerator extends MyBase {
       {
         name: 'name',
         message: 'name:',
-        default: config.name || _.kebabCase(this.appname),
+        filter: (input) => _.kebabCase(input),
+        default: config.name || this.appname,
       },
       {
         name: 'version',
