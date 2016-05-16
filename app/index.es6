@@ -1,5 +1,6 @@
 const Base = require('yeoman-generator').Base;
 const yosay = require('yosay');
+const _ = require('lodash');
 
 class MyBase extends Base {
   copyFiles(files) {
@@ -30,7 +31,7 @@ class GulpaticGenerator extends MyBase {
       {
         name: 'name',
         message: 'name:',
-        default: config.name || this.appname,
+        default: config.name || _.kebabCase(this.appname),
       },
       {
         name: 'version',
